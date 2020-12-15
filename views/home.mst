@@ -1,2 +1,4 @@
 {{> header}}
 <h1>Página Home</h1>
+
+Nome: {{userInfo.name}}

@@ -1,0 +1,15 @@
+<h1>Meu nome é {{nome}}</h1>
+
+{{#validacao}}
+<h2>Minha idade: {{idade}}</h2>
+{{/validacao}}
+
+<ul>
+    {{#ingredientes}}
+        <li>{{nome}} - {{qt}}</li>
+    {{/ingredientes}}
+</ul>
+
+{{^ingredientes}}
+    <p>Não existe itens cadastrados!</p>
+{{/ingredientes}}

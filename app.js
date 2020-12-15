@@ -1,8 +1,15 @@
 const express = require('express');
 const router = require('./routes/index');
+const helpers = require('./helpers');
 const mustach = require('mustache-express');
-
 const app = express();
+
+app.use((req, res, next) =>{
+    res.locals.h = helpers;
+    next();
+}); 
+
+
 app.use('/', router);
 app.use(express.json());
 

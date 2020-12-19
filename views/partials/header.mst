@@ -6,8 +6,6 @@
         {{^pageTitle}}
             <title>{{h.defaultPageTitle}}</title>        
         {{/pageTitle}}
-        
-
     </head>
 </html>
 

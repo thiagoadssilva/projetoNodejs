@@ -13,3 +13,7 @@ Comando para iniciar o serviço do banco de dados.
 Usando o framework express
      * Express - para usar na captura do metodo post via json.
      * Templates
+
+para trabalhar com mensagem vamos usar essa 3 bibliotecas
+
+npm install cookie-parser express-session express-flash --save

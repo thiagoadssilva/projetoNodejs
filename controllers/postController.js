@@ -10,5 +10,6 @@ exports.addAction = async (req, res) => {
     //res.json(req.body);
     const post = new Post(req.body);
     await post.save();
+    req.flash('success', 'Post adicionado com sucesso!!');
     res.redirect('/');
 };

@@ -15,5 +15,7 @@ Usando o framework express
      * Templates
 
 para trabalhar com mensagem vamos usar essa 3 bibliotecas
+     * npm install cookie-parser express-session express-flash --save
 
-npm install cookie-parser express-session express-flash --save
+Para fazer a manipulação de urls, temos que usar a biblioteca slug
+     * npm install slug --save

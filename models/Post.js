@@ -14,7 +14,7 @@ const postSchema = new mongoose.Schema({
         type:String,
         trim:true
     },
-    tags:[String] 
+    tags:[String]
 });
 
 //- Aqui estamos fazendo o tratamento, antes de salvar para criar a url

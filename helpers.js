@@ -1,3 +1,4 @@
+// Arquivo criado para colocar os valores padrões de toda aplicação.
 exports.defaultPageTitle = "site ABC";
 
 exports.menu = [

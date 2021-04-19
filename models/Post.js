@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
-const slug = require('slug');
-mongoose.Promise = global.Promise;
+const mongoose = require('mongoose'); // O mongose é reposável pela conxeção com bando de dados.
+mongoose.Promise = global.Promise; // Atualizando a forma de usar o mongose.
 
-//- Criando o schema do bando (tabela)
+const slug = require('slug');
+
+// - INICIO da estrutura do schema do bando (tabela)
 const postSchema = new mongoose.Schema({
     title:{
         type:String,
@@ -16,14 +17,16 @@ const postSchema = new mongoose.Schema({
     },
     tags:[String]
 });
+// - FIM da estrutura do schema do bando (tabela)
 
-//- Aqui estamos fazendo o tratamento, antes de salvar para criar a url
+// - INICIO estamos fazendo o tratamento, antes de salvar para criar a url
 postSchema.pre('save', function(next){
-    if(this.isModified('title')){
+    if(this.isModified('title')){ // - Condição para saber se o titulo foi alterado
         this.slug = slug(this.title, {lower:true});
     }
     next();
 });
+// - FIM estamos fazendo o tratamento, antes de salvar para criar a url
 
 //- Fazendo a chamada do mongoBd
 module.exports = mongoose.model('Post', postSchema);

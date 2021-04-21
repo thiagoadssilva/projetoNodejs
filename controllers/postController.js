@@ -11,6 +11,7 @@ exports.add = (req, res) => {
 // - INICIO da ação de envio dos dados através da requisição POST
 exports.addAction = async (req, res) => {
   //res.json(req.body);
+  req.body.tags = req.body.tags.split(',').map(t=>t.trim());
   const post = new Post(req.body);// Usamos o req.body, porque a requisição está sendo feita com o metodo POST
 
   try {
